@@ -13,7 +13,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.main_image ||= Placeholder.image_generator(height: '650')
+    self.main_image ||= Placeholder.image_generator(height: '450')
     self.thumb_image ||= Placeholder.image_generator(height: '350')
   end
 end
