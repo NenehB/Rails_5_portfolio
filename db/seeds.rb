@@ -5,10 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
 10.times do |blog|
   Blog.create!(
     title: "My Blog post #{blog}",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    topic_id: Topic.last.id
   )
 end
 
@@ -19,12 +25,31 @@ end
   )
 end
 puts '5 skills'
-9.times do |portfolio_item|
+
+8.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
-    subtitle: "My services",
+    subtitle: "Ruby on Rails",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    main_image: "https://via.placeholder.com/650",
+    main_image: "https://via.placeholder.com/450",
     thumb_image: "https://via.placeholder.com/350"
   )
 end
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio_item}",
+    subtitle: "Angular",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    main_image: "https://via.placeholder.com/450",
+    thumb_image: "https://via.placeholder.com/350"
+  )
+end
+
+3.times do |technnology|
+  Portfolio.last.technologies.create!(
+    name: "Technnology #{technnology}"
+  )
+end
+
+puts "3 technologies created"
