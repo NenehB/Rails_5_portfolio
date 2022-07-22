@@ -1,12 +1,7 @@
-GIT
-  remote: https://github.com/NenehB/NABViewTool
-  revision: 6c73cdb4d847131e8658bac5d26de7cdd110876a
-  specs:
-    NABViewTool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
+    NABViewTool (0.1.0)
     actioncable (6.1.5)
       actionpack (= 6.1.5)
       activesupport (= 6.1.5)
@@ -211,7 +206,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
-  NABViewTool!
+  NABViewTool (~> 0.1.0)
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.2.0)
   byebug
