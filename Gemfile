@@ -50,3 +50,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
 gem 'NABViewTool', '~> 0.1.0'
+gem 'petergate', '~> 3.0'
