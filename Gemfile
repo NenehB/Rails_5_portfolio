@@ -49,3 +49,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
+gem 'NABViewTool', git: 'https://github.com/NenehB/NABViewTool'
