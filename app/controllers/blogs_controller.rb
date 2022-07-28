@@ -1,6 +1,9 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy toggle_status]
   layout "blog"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
+# one other option that might seem a bit weird is to put a group of roles in an array:
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
